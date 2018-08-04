@@ -1,4 +1,4 @@
-# APP MEAT - Aplicação desenvolvida durante o curso de angular na Udemyy
+# APP MEAT - Aplicação desenvolvida durante o curso de angular na Udemy
 
 ## Créditos
 
