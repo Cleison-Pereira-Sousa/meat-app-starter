@@ -3,7 +3,7 @@ import { MenuItem } from '../menu-item/menu-item.model';
 
 export class ShoppingCartService {
 
-    items: CartItem[];
+    items: CartItem[] = [];
 
     constructor(){}
 
