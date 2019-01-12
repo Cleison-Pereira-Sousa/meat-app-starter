@@ -1,7 +1,21 @@
 <section class="content-header">
   <h1>
     Todos os Restaurantes
+    <a (click)="toogleSearch()" class='search-link pull-right'>
+      <!-- <span *ngIf="iptSearch.value"><small>"{{iptSearch}}"</small></span> -->
+      <i class="fa fa-search"></i>
+    </a>
   </h1>
+
+  <div *ngIf="searchBarState" class="row search-bar">
+    <div class="col-xs-12">
+      <form [formGroup]="searchForm">
+        <div class="form-group">
+          <input  type="text" formControlName="searchControl" class="form-control" placeholder="O que vocês está procurando?"/>
+        </div>
+      </form>
+    </div>
+  </div>
 </section>
 
 
@@ -10,6 +24,11 @@
   <div class="row">
     <div *ngFor="let restaurant of restaurants" class="col-sm-6 col-xs-12">
       <mt-restaurant [restaurant]="restaurant"></mt-restaurant>
+    </div>
+    <div *ngIf="!restaurants?.length" class="col-xs-12">
+      <p class="lead text-center">
+        Não foram encontrados itens para a sua busca.
+      </p>
     </div>
   </div>
 
